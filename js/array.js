@@ -49,3 +49,20 @@ let sortNumb = sortNumber(numbers);
 
 console.log(sortNumb);
 console.log(sortNumb2);
+
+// завдання 3
+const langs = ["london", "kyiv", "uman", "riga", "python", "php"];
+let result;
+console.log(langs);
+for (let i = 0; i < langs.length - 1; i += 1) {
+  for (let j = 0; j < langs.length - 1 - i; j++) {
+    if (langs[j].toLowerCase() > langs[j + 1].toLowerCase()) {
+      const element = langs[j];
+      langs[j] = langs[j + 1];
+      langs[j + 1] = element;
+
+      console.log(element);
+    }
+  }
+}
+console.log(langs);
